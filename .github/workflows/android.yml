@@ -40,7 +40,7 @@ jobs:
       - name: Unpack project
         run: |
           mkdir -p nova-player-source
-          unzip -o nova-player-source.zip -d nova-player-source
+          unzip -o "nova-player-source (1).zip" -d nova-player-source
 
       - name: Build debug APK
         run: gradle -p nova-player-source assembleDebug

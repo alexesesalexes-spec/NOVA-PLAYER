@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "nova-player-source.zip"
+      - "nova-player-source-fixed.zip"
       - ".github/workflows/android.yml"
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
       - name: Unpack project
         run: |
           mkdir -p nova-player-source
-          unzip -o "nova-player-source (1).zip" -d nova-player-source
+          unzip -o nova-player-source-fixed.zip -d nova-player-source
 
       - name: Build debug APK
         run: gradle -p nova-player-source assembleDebug
